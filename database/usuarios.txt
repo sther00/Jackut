@@ -1,0 +1,30 @@
+USUARIO
+login=jdoe
+senha=abc
+nome=John Doe
+atributos=
+recados=
+amigos=
+convitesEnviados=
+convitesRecebidos=
+FIM
+USUARIO
+login=jpsauve
+senha=sauvejp
+nome=Jacques Sauve
+atributos=
+recados=
+amigos=
+convitesEnviados=
+convitesRecebidos=
+FIM
+USUARIO
+login=oabath
+senha=abatho
+nome=Osorio Abath
+atributos=
+recados=
+amigos=
+convitesEnviados=
+convitesRecebidos=
+FIM
