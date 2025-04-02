@@ -5,8 +5,8 @@ public class Main {
 
         for (int i = 1; i <= 4; i++)
         {
-            String[] args2 = { "br.ufal.ic.p2.jackut.models.Facade", "Jackut-master/tests/us" + i + "_1.txt" };
-            String[] args3 = { "br.ufal.ic.p2.jackut.models.Facade", "Jackut-master/tests/us" + i + "_2.txt" };
+            String[] args2 = { "br.ufal.ic.p2.jackut.models.Facade", "tests/us" + i + "_1.txt" };
+            String[] args3 = { "br.ufal.ic.p2.jackut.models.Facade", "tests/us" + i + "_2.txt" };
             EasyAccept.main(args2);
             EasyAccept.main(args3);
         }
