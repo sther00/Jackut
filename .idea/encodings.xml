@@ -1,13 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="ISO-8859-1">
-    <file url="file://$PROJECT_DIR$/jackut/tests/us1_1.txt" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/jackut/tests/us1_2.txt" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/jackut/tests/us2_1.txt" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/jackut/tests/us2_2.txt" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/jackut/tests/us3_1.txt" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/jackut/tests/us3_2.txt" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/jackut/tests/us4_1.txt" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/jackut/tests/us4_2.txt" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tests/us8_1.txt" charset="ISO-8859-1" />
   </component>
 </project>

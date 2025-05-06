@@ -1,4 +1,4 @@
-# User Story 3 - AdiÃ§Ã£o de amigos - VerificaÃ§Ã£o de PersistÃªncia
+# User Story 3 - Adição de amigos - Verificação de Persistência
 
 expect true ehAmigo login=jpsauve amigo=oabath
 expect true ehAmigo login=oabath amigo=jpsauve

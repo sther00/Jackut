@@ -1,5 +1,5 @@
-# User Story 4 - Envio e leitura de recados entre usu√°rios
-# Permita a um usu√°rio cadastrado do Jackut enviar um recado a qualquer outro usu√°rio cadastrado.
+# User Story 4 - Envio e leitura de recados entre usu·rios
+# Permita a um usu·rio cadastrado do Jackut enviar um recado a qualquer outro usu·rio cadastrado.
 
 zerarSistema
 
@@ -7,7 +7,7 @@ criarUsuario login=jpsauve senha=sauvejp nome="Jacques Sauve"
 
 id1=abrirSessao login=jpsauve senha=sauvejp
 
-expectError "Usu√°rio n√£o cadastrado." enviarRecado id=${id1} destinatario=oabath recado="Ola!"
+expectError "Usu·rio n„o cadastrado." enviarRecado id=${id1} destinatario=oabath recado="Ola!"
 
 criarUsuario login=oabath senha=abatho nome="Osorio Abath"
 
@@ -20,8 +20,8 @@ enviarRecado id=${id2} destinatario=jpsauve recado="Fala!"
 expect "Ola!" lerRecado id=${id2}
 expect "Fala!" lerRecado id=${id1}
 
-expectError "N√£o h√° recados." lerRecado id=${id1}
-expectError "N√£o h√° recados." lerRecado id=${id2}
+expectError "N„o h· recados." lerRecado id=${id1}
+expectError "N„o h· recados." lerRecado id=${id2}
 
 enviarRecado id=${id1} destinatario=oabath recado="Recado 1"
 enviarRecado id=${id1} destinatario=oabath recado="Recado 2"
@@ -34,7 +34,7 @@ expect "Recado 2" lerRecado id=${id2}
 expect "Recado 3" lerRecado id=${id2}
 expect "Recado 4" lerRecado id=${id2}
 expect "Recado 5" lerRecado id=${id2}
-expectError "N√£o h√° recados." lerRecado id=${id2}
+expectError "N„o h· recados." lerRecado id=${id2}
 
 criarUsuario login=jdoe senha=abc nome="John Doe"
 id3=abrirSessao login=jdoe senha=abc
@@ -48,13 +48,13 @@ expect "Recado 1 de Jacques" lerRecado id=${id2}
 expect "Recado 1 de John" lerRecado id=${id2}
 expect "Recado 2 de John" lerRecado id=${id2}
 expect "Recado 2 de Jacques" lerRecado id=${id2}
-expectError "N√£o h√° recados." lerRecado id=${id2}
+expectError "N„o h· recados." lerRecado id=${id2}
 
 # erros de envio de recado
 
-expectError "Usu√°rio n√£o pode enviar recado para si mesmo." enviarRecado id=${id1} destinatario=jpsauve recado="Ola"
+expectError "Usu·rio n„o pode enviar recado para si mesmo." enviarRecado id=${id1} destinatario=jpsauve recado="Ola"
 
-# envio de recados para serem testados no arquivo de persist√™ncia
+# envio de recados para serem testados no arquivo de persistÍncia
 
 enviarRecado id=${id1} destinatario=oabath recado="Recado de Jacques para Osorio"
 enviarRecado id=${id2} destinatario=jpsauve recado="Recado de Osorio para Jacques"

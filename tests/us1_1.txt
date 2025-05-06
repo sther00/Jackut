@@ -1,21 +1,21 @@
-# User Story 1 - Cria√ß√£o de conta
-# Permita a um usu√°rio criar uma conta no Jackut . Deve ser fornecido um login, uma senha e um nome com o qual o usu√°rio ser√° conhecido na rede.
+# User Story 1 - CriaÁ„o de conta
+# Permita a um usu·rio criar uma conta no Jackut . Deve ser fornecido um login, uma senha e um nome com o qual o usu·rio ser· conhecido na rede.
 
 zerarSistema
 
-# Obs.: usar codifica√ß√£o de caracteres ISO 8859
-expectError "Usu√°rio n√£o cadastrado." getAtributoUsuario login=jpsauve atributo=nome
+# Obs.: usar codificaÁ„o de caracteres ISO 8859
+expectError "Usu·rio n„o cadastrado." getAtributoUsuario login=jpsauve atributo=nome
 
 criarUsuario login=jpsauve senha=sauvejp nome="Jacques Sauve"
 
 expect "Jacques Sauve" getAtributoUsuario login=jpsauve atributo=nome
 
-# O comando abrirSessao retorna uma id que pode ser atribu√≠da a uma vari√°vel do EasyAccept para refer√™ncia posterior no script, como voc√™
-# poder√° ver, por exemplo, na user story 2. A gente inventou esse comando por quest√£o de seguran√ßa, para simular um usu√°rio entrando a
-# senha e iniciando um modo privado de uso do sistema. Nesse caso da us1_1, ele est√° sendo usado meramente para testar a
-# senha (porque n√£o podemos usar "expect getAtributoUsuario atributo=senha", justamente pelas quest√µes de seguran√ßa). Se a senha
-# estiver correta, a sess√£o √© aberta e o teste passa sem erros. Se a senha n√£o estiver implementada corretamente (ou estiver errada), o
-# programa vai lan√ßar uma exce√ß√£o e o EasyAccept vai acusar erro nessa linha.
+# O comando abrirSessao retorna uma id que pode ser atribuÌda a uma vari·vel do EasyAccept para referÍncia posterior no script, como vocÍ
+# poder· ver, por exemplo, na user story 2. A gente inventou esse comando por quest„o de seguranÁa, para simular um usu·rio entrando a
+# senha e iniciando um modo privado de uso do sistema. Nesse caso da us1_1, ele est· sendo usado meramente para testar a
+# senha (porque n„o podemos usar "expect getAtributoUsuario atributo=senha", justamente pelas questıes de seguranÁa). Se a senha
+# estiver correta, a sess„o È aberta e o teste passa sem erros. Se a senha n„o estiver implementada corretamente (ou estiver errada), o
+# programa vai lanÁar uma exceÁ„o e o EasyAccept vai acusar erro nessa linha.
 abrirSessao login=jpsauve senha=sauvejp
 
 ###################
@@ -23,31 +23,31 @@ abrirSessao login=jpsauve senha=sauvejp
 ###################
 # cada usuario esta associado a um unico login, com o qual eh identificado no sistema; dois usuarios nao podem ter o mesmo login
 
-expectError "Conta com esse nome j√° existe." criarUsuario login=jpsauve senha=##$@!# nome="Jacques Sauve II"
+expectError "Conta com esse nome j· existe." criarUsuario login=jpsauve senha=##$@!# nome="Jacques Sauve II"
 
-# entretanto, se o login for diferente, dois usu√°rios podem ter o mesmo nome
+# entretanto, se o login for diferente, dois usu·rios podem ter o mesmo nome
 
 criarUsuario login=jpsauve2 senha=sauvejp nome="Jacques Sauve"
 
 expect "Jacques Sauve" getAtributoUsuario login=jpsauve2 atributo=nome
 abrirSessao login=jpsauve2 senha=sauvejp
 
-expectError "Login inv√°lido." criarUsuario login= senha=fasdh nome="Jacques Sauve"
-expectError "Senha inv√°lida." criarUsuario login=jpsauve3 senha= nome="Jacques Sauve"
+expectError "Login inv·lido." criarUsuario login= senha=fasdh nome="Jacques Sauve"
+expectError "Senha inv·lida." criarUsuario login=jpsauve3 senha= nome="Jacques Sauve"
 # nome vazio pode
 criarUsuario login=jpsauve3 senha=3sauvejp nome=""
 
 ###################
 # testes de todas as outras combinacoes importantes para o comando abrirSessao
 ###################
-# observe que ao dar erro, n√£o queremos dizer se o erro foi login ou senha
-# Isso √© a forma padrao de tratar o assunto pois, desta forma, o hacker tem que advinhar ambos ao mesmo tempo
+# observe que ao dar erro, n„o queremos dizer se o erro foi login ou senha
+# Isso È a forma padrao de tratar o assunto pois, desta forma, o hacker tem que advinhar ambos ao mesmo tempo
 # em vez de quebrar login e senha separadamente
 
-expectError "Login ou senha inv√°lidos." abrirSessao login=jpsauve senha=x
-expectError "Login ou senha inv√°lidos." abrirSessao login=x senha=x
-expectError "Login ou senha inv√°lidos." abrirSessao login= senha=x
-expectError "Login ou senha inv√°lidos." abrirSessao login=jpsauve senha=
+expectError "Login ou senha inv·lidos." abrirSessao login=jpsauve senha=x
+expectError "Login ou senha inv·lidos." abrirSessao login=x senha=x
+expectError "Login ou senha inv·lidos." abrirSessao login= senha=x
+expectError "Login ou senha inv·lidos." abrirSessao login=jpsauve senha=
 
 encerrarSistema
 quit

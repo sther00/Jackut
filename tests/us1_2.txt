@@ -1,4 +1,4 @@
-# User Story 1 - CriaÃ§Ã£o de conta - verificacao de persistencia
+# User Story 1 - Criação de conta - verificacao de persistencia
 
 # ao iniciar, os dados devem estar presentes pois foram recuperados de arquivo ou banco de dados, etc.
 expect "Jacques Sauve" getAtributoUsuario login=jpsauve atributo=nome

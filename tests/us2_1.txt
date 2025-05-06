@@ -1,25 +1,25 @@
-# User Story 2 - Cria√ß√£o/Edi√ß√£o de perfil
-# Permita a um usu√°rio cadastrado do Jackut criar/editar atributos de seu perfil. Ele deve poder modificar qualquer atributo do perfil 
+# User Story 2 - CriaÁ„o/EdiÁ„o de perfil
+# Permita a um usu·rio cadastrado do Jackut criar/editar atributos de seu perfil. Ele deve poder modificar qualquer atributo do perfil 
 # ou preencher um atributo inexistente.
 
 zerarSistema
 
-expectError "Usu√°rio n√£o cadastrado." editarPerfil id=${id1} atributo=descricao valor="Quem souber, me diga."
+expectError "Usu·rio n„o cadastrado." editarPerfil id=${id1} atributo=descricao valor="Quem souber, me diga."
 
 criarUsuario login=jpsauve senha=sauvejp nome="Jacques Sauve"
 
-# o usu√°rio n√£o √© obrigado a preencher qualquer dos atributos do perfil; novos atributos podem ser inventados
+# o usu·rio n„o È obrigado a preencher qualquer dos atributos do perfil; novos atributos podem ser inventados
 
-expectError "Atributo n√£o preenchido." getAtributoUsuario login=jpsauve atributo=descricao
-expectError "Atributo n√£o preenchido." getAtributoUsuario login=jpsauve atributo=estadoCivil
-expectError "Atributo n√£o preenchido." getAtributoUsuario login=jpsauve atributo=aniversario
-expectError "Atributo n√£o preenchido." getAtributoUsuario login=jpsauve atributo=filhos
-expectError "Atributo n√£o preenchido." getAtributoUsuario login=jpsauve atributo=idiomas
-expectError "Atributo n√£o preenchido." getAtributoUsuario login=jpsauve atributo=cidadeNatal
-expectError "Atributo n√£o preenchido." getAtributoUsuario login=jpsauve atributo=estilo
-expectError "Atributo n√£o preenchido." getAtributoUsuario login=jpsauve atributo=fumo
-expectError "Atributo n√£o preenchido." getAtributoUsuario login=jpsauve atributo=bebo
-expectError "Atributo n√£o preenchido." getAtributoUsuario login=jpsauve atributo=moro
+expectError "Atributo n„o preenchido." getAtributoUsuario login=jpsauve atributo=descricao
+expectError "Atributo n„o preenchido." getAtributoUsuario login=jpsauve atributo=estadoCivil
+expectError "Atributo n„o preenchido." getAtributoUsuario login=jpsauve atributo=aniversario
+expectError "Atributo n„o preenchido." getAtributoUsuario login=jpsauve atributo=filhos
+expectError "Atributo n„o preenchido." getAtributoUsuario login=jpsauve atributo=idiomas
+expectError "Atributo n„o preenchido." getAtributoUsuario login=jpsauve atributo=cidadeNatal
+expectError "Atributo n„o preenchido." getAtributoUsuario login=jpsauve atributo=estilo
+expectError "Atributo n„o preenchido." getAtributoUsuario login=jpsauve atributo=fumo
+expectError "Atributo n„o preenchido." getAtributoUsuario login=jpsauve atributo=bebo
+expectError "Atributo n„o preenchido." getAtributoUsuario login=jpsauve atributo=moro
 
 id1=abrirSessao login=jpsauve senha=sauvejp
 editarPerfil id=${id1} atributo=descricao valor="Quem souber, me diga."
